@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_sample_app/view/coinlist_screen.dart';
 
 void main() {
   runApp(const Application());
@@ -12,11 +13,7 @@ class Application extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('Initial Application'),
-        ),
-      ),
+      home: CoinListScreen(),
     );
   }
 }
