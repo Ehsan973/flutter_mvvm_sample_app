@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:mvvm_sample_app/model/crypto.dart';
 import 'package:mvvm_sample_app/service/api/network_api.dart';
+import 'package:mvvm_sample_app/service/api/web_api_fake.dart';
 import 'package:mvvm_sample_app/service/api/web_api_implementation.dart';
 
 class CoinListViewModel extends ChangeNotifier {
-  final _webApi = WebApi();
+  final NetworkApi _webApi = GetIt.I.get<NetworkApi>();
 
   List<Crypto> cryptoList = [];
 
